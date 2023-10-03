@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Documentation Starter Kit",
+  "name": "Furo",
   "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "dark": "/logo/furo-dark.svg",
+    "light": "/logo/furo-logo.png"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/logo/furo-logo.png",
   "colors": {
     "primary": "#0069ED",
     "light": "#4D9CFF",
@@ -13,53 +13,73 @@
   },
   "topbarLinks": [
     {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "name": "Docs",
+      "url": "."
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "url": "https://furo.one"
   },
   "anchors": [
     {
-      "name": "API Reference",
-      "icon": "rectangle-terminal",
-      "url": "api-reference"
+      "name": "Hopae Inc.",
+      "icon": "house-flag",
+      "url": "https://hopae.com"
     },
     {
-      "name": "Changelog",
-      "icon": "list",
-      "url": "https://mintlify.com"
+      "name": "Github",
+      "icon": "github",
+      "url": "https://github.com/hopae-official"
+    },
+    {
+      "name": "Blog",
+      "icon": "book-open",
+      "url": "https://postman.furo.one"
     },
     {
       "name": "Community",
-      "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "icon": "slack",
+      "url": "https://furo.one/community"
     }
   ],
+  "topAnchor": {
+    "name": "Documentation",
+    "icon": "book-open",
+    "iconType": "duotone"
+  },
+  "tabs": [],
+  "primaryTab": {
+    "name": "Furo LADS"
+  },
   "navigation": [
     {
-      "group": "Home",
-      "pages": ["introduction", "features"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "Get Started",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "lads/getstarted/what",
+        "lads/getstarted/how",
+        "lads/getstarted/features",
+        "lads/getstarted/patterns"
       ]
+    },
+    {
+      "group": "API",
+      "pages": ["lads/api-reference/anomalydetection"]
+    },
+    {
+      "group": "Guides",
+      "pages": ["lads/guides/anomaly"]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "slack": "https://twitter.com/mintlify",
+    "github": "https://github.com/hopae-official"
+  },
+  "api": {
+    "baseUrl": "https://lads-api.furo.one",
+    "auth": {
+      "method": "basic",
+      "name": "Project ID:API Key"
+    }
   }
 }

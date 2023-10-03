@@ -1,0 +1,64 @@
+---
+title: Anomaly Detection API
+api: 'POST https://lads-api.furo.one/lads'
+---
+
+## API Key
+
+<Note>We are using basic authentication method in HTTP header</Note>
+
+| username   | password |
+| ---------- | -------- |
+| Project ID | API Key  |
+
+## Request
+
+<ParamField body="ip" type="string" required>
+  user IP Address
+</ParamField>
+
+<ParamField body="type" type="string" required>
+  login/signup/reset
+</ParamField>
+
+<ParamField body="status" type="string" required>
+  pending/success/fail
+</ParamField>
+
+<ParamField body="userAgent" type="string">
+  user agnet value from user browser
+</ParamField>
+
+<ParamField body="uid" type="string">
+  user indentifier
+</ParamField>
+
+<ParamField body="social" type="string">
+  Social Login Type
+</ParamField>
+
+<ParamField body="headers" type="string">
+  Requset headers (allow*)
+</ParamField>
+
+<ParamField body="hashedEmail" type="string">
+  requested Email (hashed with SHA256)
+</ParamField>
+
+<ParamField body="hasedPassword" type="string">
+  requested password (hashed with SHA256)
+</ParamField>
+
+<ParamField body="fingerprint" type="string">
+  user device fingerprint
+</ParamField>
+
+<ResponseExample>
+  ```json Success
+  {
+    "score": 78,
+    "pattern": "A07",
+    "fingerprint": "fd8sfnd8dff92m43vxd9"
+  }
+```
+</ResponseExample>
