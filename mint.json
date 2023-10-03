@@ -79,7 +79,7 @@
     "baseUrl": "https://lads-api.furo.one",
     "auth": {
       "method": "basic",
-      "name": "Project ID:API Key"
+      "name": "APP ID:API Key"
     }
   }
 }

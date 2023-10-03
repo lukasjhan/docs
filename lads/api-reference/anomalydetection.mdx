@@ -54,11 +54,32 @@ api: 'POST https://lads-api.furo.one/lads'
 </ParamField>
 
 <ResponseExample>
-  ```json Success
+  ```json Anomaly
   {
     "score": 78,
     "pattern": "A07",
     "fingerprint": "fd8sfnd8dff92m43vxd9"
   }
 ```
+  ```json Normal
+  {
+    "score": 32,
+    "pattern": "",
+    "fingerprint": "fd8sfnd8dff92m43vxd9"
+  }
+```
 </ResponseExample>
+
+## Response
+
+<ResponseField name="score" type="number">
+  Score of the anomaly. 0-100 (0: Normal, 100: Anomaly)
+</ResponseField>
+
+<ResponseField name="pattern" type="string">
+  [Pattern code](/lads/getstarted/patterns) of the anomaly
+</ResponseField>
+
+<ResponseField name="fingerprint" type="string">
+  fingerprint of the user device
+</ResponseField>
