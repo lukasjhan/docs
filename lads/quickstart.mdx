@@ -1,0 +1,79 @@
+---
+title: Quickstart
+description: Start making your login secure in under 5 minutes
+---
+
+## Getting Started with Furo LADS Docs
+
+Welcome to the Furo LADS documentation guide. Follow the instructions below to learn how to configure and secure your login with the advanced features Furo LADS offers.
+
+### 1. Configuring Furo LADS Project
+
+We provide an API to secure your login. You can manage its configuration in Our [Dashboard](https://lads.furo.one/home).
+
+<Accordion title="Create a LADS Project">
+  To create your first project, All you need to do is to click ["Get
+  started"](https://lads.furo.one/home) button.
+  ![project](/images/first_project.png) This is how the first project looks
+  like.
+</Accordion>
+
+<Accordion title="Check APP ID & API Key">
+  We use Basic Auth to authenticate your requests. You can find your APP ID and
+  API Key in dashboard. ![apikey](/images/apikey.png)
+</Accordion>
+
+### 2. Secure Your Login
+
+<Accordion title="Add API request in your server">
+  You can find the API documentation [here](/api-reference/anomalydetection).
+  You can use any languages to use our services.
+
+below is an example of using our API in NodeJS.
+
+```js
+  const express = require('express');
+  const axios = require('axios');
+
+  const app = express();
+  app.use(express.json());
+
+  const login = (req, res) => {
+  const user = database.getUser(req.userId, req.password);
+
+  try {
+	  const { score, type } = await axios.post("https://lads-api.furo.one/lads",
+        {
+            uid: user.id,
+            ip: req.ip,
+            userAgent: req.headers['user-agent'],
+            type: "login",
+            status: "success"
+          },
+          {
+            auth: {
+              username: "APP_ID",
+              password: "API_KEY"
+            },
+            timeout: 2000,
+          }
+      );
+
+	  // do actions..
+	  if (score >= 70) {
+		  // verify email
+	  } else if (score >= 50) {
+		  // send alert email
+	  }
+  } catch {
+	  //...
+  }
+  return res.json(user);
+}
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000.');
+});
+```
+
+</Accordion>

@@ -32,25 +32,25 @@
   },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Getting Started",
+      "pages": ["lads/quickstart"]
+    },
+    {
+      "group": "Guides",
       "pages": [
         "lads/getstarted/what",
         "lads/getstarted/how",
         "lads/getstarted/features",
-        "lads/getstarted/patterns"
+        "lads/getstarted/patterns",
+        "lads/guides/anomaly"
       ]
     },
     {
       "group": "API",
       "pages": ["api-reference/anomalydetection"]
-    },
-    {
-      "group": "Guides",
-      "pages": ["lads/guides/anomaly"]
     }
   ],
   "footerSocials": {
-    "slack": "https://twitter.com/mintlify",
     "github": "https://github.com/hopae-official"
   },
   "api": {
