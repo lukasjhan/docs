@@ -59,5 +59,8 @@
       "method": "basic",
       "name": "APP ID:API Key"
     }
+  },
+  "modeToggle": {
+    "default": "dark"
   }
 }
