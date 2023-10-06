@@ -21,36 +21,14 @@
     "name": "Get Started",
     "url": "https://furo.one"
   },
-  "anchors": [
+  "tabs": [
     {
-      "name": "Hopae Inc.",
-      "icon": "house-flag",
-      "url": "https://hopae.com"
-    },
-    {
-      "name": "Github",
-      "icon": "github",
-      "url": "https://github.com/hopae-official"
-    },
-    {
-      "name": "Blog",
-      "icon": "book-open",
-      "url": "https://postman.furo.one"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://furo.one/community"
+      "name": "API Playground",
+      "url": "api-reference"
     }
   ],
-  "topAnchor": {
-    "name": "Documentation",
-    "icon": "book-open",
-    "iconType": "duotone"
-  },
-  "tabs": [],
   "primaryTab": {
-    "name": "Furo LADS"
+    "name": "Documentation"
   },
   "navigation": [
     {
@@ -64,7 +42,7 @@
     },
     {
       "group": "API",
-      "pages": ["lads/api-reference/anomalydetection"]
+      "pages": ["api-reference/anomalydetection"]
     },
     {
       "group": "Guides",
