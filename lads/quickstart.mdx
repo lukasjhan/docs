@@ -34,13 +34,7 @@ Don't forget to add your **APP ID** and **API Key** in your request as **Basic A
 below is an example of using our API in NodeJS.
 
 ```js
-  const express = require('express');
-  const axios = require('axios');
-
-  const app = express();
-  app.use(express.json());
-
-  const login = (req, res) => {
+const login = app.post('/login', (req, res) => {
   const user = database.getUser(req.userId, req.password);
 
   try {
@@ -70,8 +64,7 @@ below is an example of using our API in NodeJS.
   } catch {
 	  //...
   }
-  return res.json(user);
-}
+});
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000.');
